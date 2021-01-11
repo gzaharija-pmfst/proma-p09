@@ -13,12 +13,10 @@ import JelaFavoriti from "../screens/JelaFavoriti";
 import Boje from "../constants/Boje";
 
 const stackOpcije = {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: Boje.glavna,
-    },
-    headerTintColor: "white",
+  headerStyle: {
+    backgroundColor: Boje.glavna,
   },
+  headerTintColor: "white",
 };
 
 const ReceptiNavigacija = createStackNavigator(
@@ -34,7 +32,9 @@ const ReceptiNavigacija = createStackNavigator(
     },
     Detalji: Recept,
   },
-  stackOpcije
+  {
+    defaultNavigationOptions: stackOpcije,
+  }
 );
 
 const FavoritiNavigacija = createStackNavigator(
@@ -42,7 +42,9 @@ const FavoritiNavigacija = createStackNavigator(
     Favoriti: JelaFavoriti,
     Detalji: Recept,
   },
-  stackOpcije
+  {
+    defaultNavigationOptions: stackOpcije,
+  }
 );
 
 const tabEkrani = {
